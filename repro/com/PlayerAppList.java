@@ -77,19 +77,77 @@ public class PlayerAppList {
                     record = new Record(name, idNumber, contactNumber, email, nationality, position);
                     // Call add() record
                     hr.add(record);
-                    System.out.println(record.toString());
+                    System.out.println(record);
 
                     // Break statement used to terminate program
                     // from here only once it entered this case
                     break;
 
+                // Case 2
+                case 2:
+
+                    // Display message
+                    System.out.print(
+                            "What is the Player id number ? ");
+                    int rId = input.nextInt();
+
+                    // Invoke remove/delete record
+                    hr.delete(rId);
+
+                    break;
+
+                // Case 3
+                case 3:
+
+                    // Display message
+                    System.out.print(
+                            "What is the Player id number? ");
+
+                    int rIdNo = input.nextInt();
+                    hr.update(rIdNo, input);
+
+                    break;
+
+                // Case 4
+                case 4:
+
+                    // Display message
+                    System.out.print(
+                            "What is the Player id ? ");
+                    int bookId = input.nextInt();
+
+                    if (!hr.find(bookId)) {
+                        System.out.println(
+                                "Player id does not exist\n");
+                    }
+
+                    break;
+
+                // Case 5
+                case 5:
+                    hr.display();
+                    break;
+
+                // Case 6
+                case 9:
+
+                    // Display message
+                    System.out.println(
+                            "\nThank you for using the program. Goodbye!\n");
+                    System.exit(0);
+
+                    break;
+
+                // Case 7: Default case
+                // If none above case executes
                 default:
+
                     System.out.println("\nInvalid input\n");
                     break;
             }
         }
 
-        while (option != 1);
+        while (option != 9);
     }
 
         public static void menu()

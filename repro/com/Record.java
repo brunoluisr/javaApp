@@ -68,7 +68,7 @@ public class Record {
         // Returning the record
         return "Records{"
                 + "name=" + name + ", idNumber=" + idNumber
-                + ", contactNumber=" + contactNumber + '}';
+                + ", contactNumber=" + contactNumber + ", email=" + email + ", nationally=" + nationality + ", position=" + position + '}';
     }
 
 
